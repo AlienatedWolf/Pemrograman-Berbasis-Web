@@ -1,0 +1,56 @@
+:root {
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-orange: #f97316;
+  --text-dark: #1f2937;
+  --shadow-normal: rgba(0, 0, 0, 0.1);
+  --shadow-hover: rgba(0, 0, 0, 0.15);
+  --font: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-card {
+  background-color: var(var(--card-bg));
+  padding: 35px 60px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px var(--shadow-normal);
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  max-width: 600px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center;
+}
+
+.message-card:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 15px 30px var(--shadow-hover);
+}
+
+.message-card p {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--text-orange);
+  margin: 0;
+}
+
+.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
